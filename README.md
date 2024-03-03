@@ -1,3 +1,28 @@
+安裝備忘錄 - 用於解決 V2RAY安裝新版本 VMess MD5 认证信息 淘汰机制 (VMessAEAD 协议已经经过同行评议并已经整合了相应的修改。 VMess MD5 认证信息 的淘汰机制已经启动。) Android 沒有問題
+
+安裝新版本
+
+Step 1
+bash <(wget -qO- -o- https://git.io/v2ray.sh)
+
+Step 2 
+運行及安裝
+
+Step 3 
+更改端口至443
+
+Step 4 
+VMESSEDIT 修改服務器名稱
+
+Step 5 
+去到 /lib/systemd/system/v2ray.service 的 service 
+加上 Environment="V2RAY_VMESS_AEAD_FORCED=false"
+然後 systemctl daemon-reload
+再v2ray restart
+
+
+
+
 # 介绍
 
 最好用的 V2Ray 一键安装脚本 &amp; 管理脚本
