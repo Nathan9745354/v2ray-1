@@ -15,6 +15,9 @@ Step 4
 VMESSEDIT 修改服務器名稱
 
 Step 5 
+上傳到database 讓api 拿取得到
+
+Step 6
 去到 /lib/systemd/system/v2ray.service 的 service 
 加上 Environment="V2RAY_VMESS_AEAD_FORCED=false"
 然後 systemctl daemon-reload
